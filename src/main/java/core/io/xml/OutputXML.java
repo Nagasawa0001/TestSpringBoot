@@ -1,4 +1,4 @@
-package core;
+package core.io.xml;
 
 import java.io.File;
 
@@ -12,7 +12,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class WriteXML1 {
+public class OutputXML {
 
 	/**
 	 * @param args
@@ -39,7 +39,7 @@ public class WriteXML1 {
 
 		TransformerFactory tfFactory = TransformerFactory.newInstance();
 		Transformer tf = tfFactory.newTransformer();
-		tf.transform(new DOMSource(doc), new StreamResult(new File("src/main/resources/outputFile2.xml")));
+		tf.transform(new DOMSource(doc), new StreamResult(new File("src/main/resources/io/output/output.xml")));
 
 
 		}
