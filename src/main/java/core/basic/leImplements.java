@@ -1,0 +1,10 @@
+package core.basic;
+
+public class leImplements {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}
