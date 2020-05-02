@@ -2,7 +2,9 @@ package core.io.csv;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.OutputStreamWriter;
 
 public class OutputCSV {
 
@@ -17,11 +19,14 @@ public class OutputCSV {
 		// 出力するファイルパスを指定
 		File file = new File("src/main/resources/io/output/output.csv");
 
-		// ファイルの有無、ファイルパスの有無をチェック + ファイルを開いている
+		// ファイルの有無、ファイルパスの有無をチェック + ファイルを開いている(文字コードの指定はできない)
 		FileWriter fw = new FileWriter(file);
 
+		// FileWriterと違い文字コードが指定できる
+		OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+
 		// 引数のバイト数を確認している（0以下なら例外処理）OKなら引数をメンバ変数にセットしている
-		BufferedWriter bw = new BufferedWriter(fw);
+		BufferedWriter bw = new BufferedWriter(osw);
 
 		for(String item : list) {
 			// CSVファイルにテキストを書き込む

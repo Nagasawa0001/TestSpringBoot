@@ -7,7 +7,6 @@ import java.io.FileReader;
 public class InputCSV {
 
 	public static void main(String[] args) throws Exception {
-
 		// ファイルパスを指定
 		File file = new File("src/main/resources/io/input/input.csv");
 
